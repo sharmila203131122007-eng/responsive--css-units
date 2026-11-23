@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Responsive CSS Units Demo</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f4f6f8;
+      color: #222;
+    }
+
+    header {
+      background: #2563eb;
+      color: white;
+      padding: 5vw;
+      text-align: center;
+    }
+
+    /* Responsive heading */
+    header h1 {
+      font-size: clamp(1.8rem, 5vw, 3.5rem);
+    }
+
+    header p {
+      font-size: clamp(1rem, 2vw, 1.3rem);
+    }
+
+    .container {
+      width: 90%;
+      max-width: 1000px;
+      margin: 30px auto;
+    }
+
+    .card {
+      background: white;
+      padding: 2rem;
+      margin-bottom: 20px;
+      border-radius: 12px;
+    }
+
+    /* PX */
+    .px-example {
+      font-size: 24px;
+    }
+
+    /* EM */
+    .em-example {
+      font-size: 2em;
+    }
+
+    /* REM */
+    .rem-example {
+      font-size: 2rem;
+    }
+
+    /* Percentage */
+    .percent-box {
+      width: 80%;
+      background: #bfdbfe;
+      padding: 15px;
+    }
+
+    /* VW */
+    .vw-example {
+      font-size: 5vw;
+      color: #2563eb;
+    }
+
+    /* CLAMP */
+    .clamp-example {
+      font-size: clamp(1.5rem, 4vw, 3rem);
+      color: #16a34a;
+    }
+
+    button {
+      padding: 1em 2em;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      background: #2563eb;
+      color: white;
+    }
+
+    footer {
+      text-align: center;
+      padding: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+  <header>
+    <h1>Responsive CSS Units</h1>
+    <p>Resize your browser to see the text scale smoothly!</p>
+  </header>
+
+  <main class="container">
+
+    <section class="card">
+      <h2>PX Unit</h2>
+      <p class="px-example">This text uses 24px.</p>
+    </section>
+
+    <section class="card">
+      <h2>EM Unit</h2>
+      <p class="em-example">This text uses 2em.</p>
+    </section>
+
+    <section class="card">
+      <h2>REM Unit</h2>
+      <p class="rem-example">This text uses 2rem.</p>
+    </section>
+
+    <section class="card">
+      <h2>Percentage (%)</h2>
+      <div class="percent-box">
+        This box uses 80% width.
+      </div>
+    </section>
+
+    <section class="card">
+      <h2>VW Unit</h2>
+      <p class="vw-example">This text uses 5vw.</p>
+    </section>
+
+    <section class="card">
+      <h2>Clamp Function</h2>
+      <p class="clamp-example">
+        This heading scales smoothly!
+      </p>
+    </section>
+
+    <section class="card">
+      <h2>Responsive Button</h2>
+      <button>Click Me</button>
+    </section>
+
+  </main>
+
+  <footer>
+    <p>CSS Responsive Units Demo</p>
+  </footer>
+
+</body>
+</html>
